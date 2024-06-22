@@ -85,7 +85,7 @@ if prompt := st.chat_input("Enter yaad..."):
                 }
                 for m in st.session_state.messages
             ],
-            max_tokens=max_tokens,
+            
             stream=True
         )
 
