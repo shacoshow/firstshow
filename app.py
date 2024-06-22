@@ -56,7 +56,7 @@ max_tokens_range = models[model_option]["tokens"]
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
-    avatar = '🤖' if message["role"] == "assistant" else '👨‍💻'
+    avatar = '🤖' if message["role"] == "assistant" else '🧛‍♂️'
     with st.chat_message(message["role"], avatar=avatar):
         st.markdown(message["content"])
 
@@ -71,7 +71,7 @@ def generate_chat_responses(chat_completion) -> Generator[str, None, None]:
 if prompt := st.chat_input("Enter yaad..."):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
-    with st.chat_message("user", avatar='👨‍💻'):
+    with st.chat_message("user", avatar='🧛‍♂️'):
         st.markdown(prompt)
 
     # Fetch response from Groq API
@@ -90,7 +90,7 @@ if prompt := st.chat_input("Enter yaad..."):
         )
 
         # Use the generator function with st.write_stream
-        with st.chat_message("assistant", avatar="🤖"):
+        with st.chat_message("assistant", avatar="🧙‍♂️"):
             chat_responses_generator = generate_chat_responses(chat_completion)
             full_response = st.write_stream(chat_responses_generator)
     except Exception as e:
