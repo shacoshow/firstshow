@@ -56,7 +56,7 @@ max_tokens_range = models[model_option]["tokens"]
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
-    avatar = '🤖' if message["role"] == "assistant" else '🧛‍♂️'
+    avatar = '🧙‍♂️' if message["role"] == "assistant" else '🧛‍♂️'
     with st.chat_message(message["role"], avatar=avatar):
         st.markdown(message["content"])
 
