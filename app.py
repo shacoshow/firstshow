@@ -32,7 +32,7 @@ if "selected_model" not in st.session_state:
 # Define model details
 models = {
     
-    "mixtral-8x7b-32768": {"name": "Mixtral-8x7b-Instruct-v0.1", "tokens": 32768, "developer": "Mistral"},
+    "mixtral-8x7b-32768": {"name": "GANG", "tokens": 32768, "developer": "Mistral"},
 }
 
 # Layout for model selection and max_tokens slider
